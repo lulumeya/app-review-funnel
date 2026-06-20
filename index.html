@@ -112,8 +112,8 @@
         <div class="slots">
           <div class="slot"><span class="lb">타이틀</span><span class="vl"><b>(신규 문구 필요)</b><br><span class="now">현재(레거시): “플레이 스토어에 후기를 남겨주시겠어요?”</span></span></div>
           <div class="slot"><span class="lb">본문</span><span class="vl"><span class="none">없음 — 추가할지 결정 필요</span></span></div>
-          <div class="slot"><span class="lb">좌버튼</span><span class="vl"><b>(신규)</b> <span class="now">현재 “다음에요” · 동작: 2주 숨김</span></span></div>
-          <div class="slot"><span class="lb">우버튼</span><span class="vl"><b>(신규)</b> <span class="now">현재 “네, 좋아요” · 동작: Play 스토어</span></span></div>
+          <div class="slot"><span class="lb">좌버튼</span><span class="vl"><b>(검토)</b> <span class="now">현재 “다음에요” · 동작: 2주 숨김</span></span></div>
+          <div class="slot"><span class="lb">우버튼</span><span class="vl"><b>(검토)</b> <span class="now">현재 “네, 좋아요” · 동작: Play 스토어</span></span></div>
         </div>
       </div>
     </div>
@@ -126,8 +126,8 @@
         <div class="slots">
           <div class="slot"><span class="lb">타이틀</span><span class="vl"><b>(신규 문구 필요)</b><br><span class="now">현재(레거시): “저희에게 아쉬운 점, 알려주시겠어요?”</span></span></div>
           <div class="slot"><span class="lb">본문</span><span class="vl"><span class="none">없음 — 추가할지 결정 필요</span></span></div>
-          <div class="slot"><span class="lb">좌버튼</span><span class="vl"><b>(신규)</b> <span class="now">현재 “다음에요” · 동작: 2주 숨김</span></span></div>
-          <div class="slot"><span class="lb">우버튼</span><span class="vl"><b>(신규)</b> <span class="now">현재 “네, 좋아요” · 동작: 채널톡</span></span></div>
+          <div class="slot"><span class="lb">좌버튼</span><span class="vl"><b>(검토)</b> <span class="now">현재 “다음에요” · 동작: 2주 숨김</span></span></div>
+          <div class="slot"><span class="lb">우버튼</span><span class="vl"><b>(검토)</b> <span class="now">현재 “네, 좋아요” · 동작: 채널톡</span></span></div>
         </div>
       </div>
     </div>
@@ -151,18 +151,16 @@
     <tr><td><mark class="k">canReviewContentWithUserName</mark></td><td><mark class="k">can_review_content_with_user_name</mark></td><td>①</td><td><span class="chip new">정리</span> 신규 타이틀엔 이름 미사용 → 폐기 검토</td></tr>
     <tr><td><mark class="k">reviewLeftContent</mark></td><td><mark class="k">review_left_content</mark></td><td>②</td><td><span class="chip todo">검토</span> 신규 타이틀 (키는 기존)</td></tr>
     <tr><td><mark class="k">reviewLeftDescription</mark></td><td><mark class="k">review_left_description</mark></td><td>②</td><td><span class="chip new">신규(선택)</span> 본문 추가 시</td></tr>
-    <tr><td><mark class="k">reviewLeftLeftBtn</mark></td><td><mark class="k">review_left_left_btn</mark></td><td>②</td><td><span class="chip new">신규(분리 시)</span> 현재 <mark class="k">bad_review_left_btn</mark> 공유 중</td></tr>
-    <tr><td><mark class="k">reviewLeftRightBtn</mark></td><td><mark class="k">review_left_right_btn</mark></td><td>②</td><td><span class="chip new">신규(분리 시)</span> 현재 <mark class="k">bad_review_right_btn</mark> 공유 중</td></tr>
     <tr><td><mark class="k">badReviewContent</mark></td><td><mark class="k">bad_review_content</mark></td><td>③</td><td><span class="chip todo">검토</span> 신규 타이틀 (키는 기존)</td></tr>
     <tr><td><mark class="k">badReviewDescription</mark></td><td><mark class="k">bad_review_description</mark></td><td>③</td><td><span class="chip new">신규(선택)</span> 본문 추가 시</td></tr>
-    <tr><td><mark class="k">badReviewLeftBtn</mark></td><td><mark class="k">bad_review_left_btn</mark></td><td>③</td><td><span class="chip todo">검토</span> 다음에요</td></tr>
-    <tr><td><mark class="k">badReviewRightBtn</mark></td><td><mark class="k">bad_review_right_btn</mark></td><td>③</td><td><span class="chip todo">검토</span> 네, 좋아요</td></tr>
+    <tr><td><mark class="k">badReviewLeftBtn</mark></td><td><mark class="k">bad_review_left_btn</mark></td><td>②·③ 공용</td><td><span class="chip todo">검토</span> 좌버튼 — 지금 ②③ 같은 문구 (“다음에요”)</td></tr>
+    <tr><td><mark class="k">badReviewRightBtn</mark></td><td><mark class="k">bad_review_right_btn</mark></td><td>②·③ 공용</td><td><span class="chip todo">검토</span> 우버튼 — 지금 ②③ 같은 문구 (“네, 좋아요”)</td></tr>
   </table>
-  <p class="note" style="margin-top:14px"><b>Key 표기 안내</b> · Android는 <mark class="k">snake_case</mark>, Lokalise는 <mark class="k">camelCase</mark>. ②③ 버튼은 레거시에서 <mark class="k">bad_review_*_btn</mark> 하나를 두 화면이 공유 — 화면별로 다른 문구를 쓰려면 <mark class="k">review_left_*_btn</mark>을 신규로 분리해야 합니다(키명은 제안값, 조정 가능).</p>
+  <p class="note" style="margin-top:14px"><b>버튼 문구는 그대로 갈아끼웁니다</b> · 버튼 UI는 화면마다 동일하게 두고 <b>문구만 상황에 맞게 바꿔 끼웁니다</b>(버튼을 새로 만드는 게 아닙니다). 지금은 ②와 ③의 좌/우 버튼이 <b>같은 문구를 공유</b>합니다 — <b>②와 ③에서 버튼 글자가 달라야 하는지만</b> 알려주세요. 같으면 그대로 두고, 다르면 ②용 문구만 더 주시면 됩니다(나머지는 개발이 처리). · Key 표기: Android <mark class="k">snake_case</mark> / Lokalise <mark class="k">camelCase</mark>.</p>
 
   <div class="note">
     <b>결정 부탁드릴 점</b><br>
-    1) ②③ 타이틀·버튼 신규 문구 &nbsp;·&nbsp; 2) 본문(Description)을 ①에만 둘지 ②③에도 넣을지 &nbsp;·&nbsp; 3) 레거시에선 ②와 ③의 버튼 문구가 같은 키를 공유했는데, 화면별로 다르게 쓸 거면 키 분리 필요.<br>
+    1) ②③ 타이틀·버튼 신규 문구 &nbsp;·&nbsp; 2) 본문(Description)을 ①에만 둘지 ②③에도 넣을지 &nbsp;·&nbsp; 3) ②와 ③의 버튼 글자가 같아도 되는지 / 달라야 하는지 (지금은 둘이 같은 문구).<br>
     <span style="color:#9aa0a8">대상 6개 언어(ko/en/ja/th/zh-Hans/zh-Hant) · 확정 시 Lokalise → 자동 PR 반영 · 위 캡처는 실제 단말(앱 로케일 ko)에서 촬영.</span>
   </div>
 </div>
